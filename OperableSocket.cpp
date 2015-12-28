@@ -62,6 +62,10 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
 
 //Protected methods:
 
+OperableSocket::OperableSocket()
+{
+}
+
 const unsigned char* OperableSocket::getMessage(int length)
 {
     int msgLen = readMessageLength();
