@@ -1,4 +1,4 @@
-//Base Socket Class.
+//Base Socket class definition.
 #ifndef SOCKET_H
 #define SOCKET_H
 
@@ -13,15 +13,14 @@
     {
 	
         private:
-            int fd;         //The socket file descriptor.	
-            void close();   //Close socket.
+            int fd;         //Socket file descriptor.
 
         protected:
             Socket();               //Default constructor.
-            Socket(int fd);         //Constructor - set socket file descriptor value.
+            Socket(int fd);         //Constructor - calls setSocket().
             ~Socket();              //Destructor - closes socket.
-            void setSocket(int fd); //Set the socket file descriptor.
-            int getSocket();        //Get the socket file descriptor.
+            void setSocket(int fd); //Set socket file descriptor.
+            int getSocket();        //Get socket file descriptor.
     };
 
 #endif

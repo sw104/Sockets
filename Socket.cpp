@@ -1,13 +1,6 @@
 //Base Socket Class Implementation.
 #include "Socket.h"
 
-//Private methods:
-
-void Socket::close()
-{
-    ::close(fd);
-}
-
 //Protected methods:
 
 Socket::Socket()
@@ -21,7 +14,7 @@ Socket::Socket(int fd)
 
 Socket::~Socket()
 {
-    close();
+    ::close(fd);
 }
 
 void Socket::setSocket(int fd)

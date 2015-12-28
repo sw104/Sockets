@@ -1,4 +1,4 @@
-//Server Socket class.
+//Server Socket class definition.
 #ifndef SERVERSOCKET_H
 #define SERVERSOCKET_H
 
@@ -6,14 +6,14 @@
 
     class ServerSocket: public Socket
     {
-        struct sockaddr_in serverAddr, clientAddr;	//serverAddr contains the server address, and clientAddr a connected client address. 
-        socklen_t clientLen;						//Contains the size of the address of the client.
+        struct sockaddr_in serverAddr, clientAddr;	//serverAddr - address of server, clientAddr - address of connected client. 
+        socklen_t clientLen;						//Size of the client address.
 
         public:
             ServerSocket();			//Default constructor (empty).
-            ServerSocket(int port); //Constructor - calls create() with specified port. 
-            void listen(int port);	//Calls create() with specified port, then listens on it.
-            int accept();   		//Accept a client connection and returns the client file descriptor.
+            ServerSocket(int port); //Constructor - calls listen(). 
+            void listen(int port);	//Opens socket on port and listens.
+            int accept();   		//Accept client connection and return client file descriptor.
 	};
 
 #endif

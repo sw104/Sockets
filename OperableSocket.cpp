@@ -106,7 +106,7 @@ void OperableSocket::sendMessage(std::string message)
 
 std::string OperableSocket::fetchMessage()
 {
-    std::pair<const unsigned char*, int> msgAndLen (getMessageAndLength()); //Get the message and its length.
+    std::pair<const unsigned char*, int> msgAndLen(getMessageAndLength());
     std::string str((char*)std::get<0>(msgAndLen), std::get<1>(msgAndLen)); //Convert raw bytes message into string.
     return str;
 }
