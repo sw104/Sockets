@@ -62,12 +62,6 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
 
 //Protected methods:
 
-const unsigned char* OperableSocket::getMessage()
-{
-    readMessage(readMessageLength());
-    return buffer;
-}
-
 const unsigned char* OperableSocket::getMessage(int length)
 {
     int msgLen = readMessageLength();
@@ -106,10 +100,13 @@ OperableSocket::~OperableSocket()
 
 void OperableSocket::sendMessage(std::string message)
 {
-    //TODO: Add implementation.
+    const unsigned char* cMsg = (unsigned char*)message.c_str();    //Convert string into raw bytes.
+    sendMessage(cMsg, message.length());
 }
 
 std::string OperableSocket::fetchMessage()
 {
-    //TODO: Add implementation.
+    std::pair<const unsigned char*, int> msgAndLen (getMessageAndLength()); //Get the message and its length.
+    std::string str((char*)std::get<0>(msgAndLen), std::get<1>(msgAndLen)); //Convert raw bytes message into string.
+    return str;
 }

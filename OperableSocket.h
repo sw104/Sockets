@@ -23,8 +23,7 @@
             void readMessage(int length);                               //Read incomming message of supplied length.
             void writeMessage(const unsigned char* message, int length);//Write message of supplied length.
 
-        protected: 
-            const unsigned char* getMessage();                          //Read incomming message and return buffer.
+        protected:
             const unsigned char* getMessage(int length);                //Read incomming message and return buffer. Ensure the message sent is the length asked for.
             std::pair<const unsigned char*, int> getMessageAndLength(); //Read the sent message and return it and its length. 
             void sendMessage(const unsigned char* message, int length); //Send a raw bytes message of the specified length.
