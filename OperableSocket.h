@@ -24,12 +24,13 @@
             void writeMessage(const unsigned char* message, int length);//Write message of supplied length.
 
         protected:
+            OperableSocket();                                           //Default constructor (empty) - dervied classes must set socket file descriptor.
             const unsigned char* getMessage(int length);                //Read incomming message and return buffer. Ensure the message sent is the length asked for.
             std::pair<const unsigned char*, int> getMessageAndLength(); //Read the sent message and return it and its length. 
             void sendMessage(const unsigned char* message, int length); //Send a raw bytes message of the specified length.
         
         public:
-            OperableSocket(int socket);                     //Constructor - calls Socket constructor and sets socket fd.
+            OperableSocket(int socket);                     //Constructor - calls Socket constructor and sets socket file descriptor.
             ~OperableSocket();                              //Destructor.
             virtual void sendMessage(std::string message);  //Send an std::string message.
             virtual std::string fetchMessage();             //Fetch message written to socket.
