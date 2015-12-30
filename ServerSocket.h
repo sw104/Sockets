@@ -10,10 +10,10 @@
         socklen_t clientLen;						//Size of the client address.
 
         public:
-            ServerSocket();			//Default constructor (empty).
-            ServerSocket(int port); //Constructor - calls listen(). 
-            void listen(int port);	//Opens socket on port and listens.
-            int accept();   		//Accept client connection and return client file descriptor.
+            ServerSocket();			                    //Default constructor (empty).
+            ServerSocket(int port, int keepAlive = 1);  //Constructor - calls listen(). 
+            void listen(int port, int keepAlive = 1);   //Opens socket on port and listens. "keepAlive" enables/disables TCP keepalive.
+            int accept();   		                    //Accept client connection and return client file descriptor.
 	};
 
 #endif
