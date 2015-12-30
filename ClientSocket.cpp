@@ -1,7 +1,7 @@
 //Client Socket class implementation.
 #include "ClientSocket.h"
 
-//Public Methods:
+//Public methods:
 
 ClientSocket::ClientSocket()
 {
