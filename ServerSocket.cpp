@@ -1,7 +1,7 @@
 //Server Socket class implementation.
 #include "ServerSocket.h"
 
-//Public Methods:
+//Public methods:
 
 ServerSocket::ServerSocket()	
 {
