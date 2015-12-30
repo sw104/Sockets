@@ -2,9 +2,11 @@
 
 #include "Log.h"
 
+//Public methods:
+
 Log::Log(std::string logName, bool isTimeStamped)
 {	
-	this.isTimeStamped = isTimeStamped;
+	this->isTimeStamped = isTimeStamped;
 	logFile.open(logName, std::fstream::out | std::fstream::app);   //Append any existing file.
 }
 

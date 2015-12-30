@@ -7,7 +7,7 @@
 #include <fstream>  //File output operations.
 #include <string>   //Message handling.
 
-    class Log
+    class Log   //Logging operations.
     {
         private:
             std::fstream logFile;   //Log file.
