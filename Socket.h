@@ -15,7 +15,7 @@
 
 #include "SocketException.h"    //Socket specific exceptions.
 
-    class Socket
+    class Socket    //Generic socket properties.
     {
 	
         private:

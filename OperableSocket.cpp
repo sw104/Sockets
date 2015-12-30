@@ -1,4 +1,4 @@
-//Operable Socket implementation class.
+//Operable Socket class implementation.
 #include "OperableSocket.h"
 
 //Private methods:

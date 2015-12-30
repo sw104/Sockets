@@ -1,4 +1,4 @@
-//Base Socket Class Implementation.
+//Base Socket class implementation.
 #include "Socket.h"
 
 //Protected methods:

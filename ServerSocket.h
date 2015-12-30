@@ -4,7 +4,7 @@
 
 #include "Socket.h" //Generic socket properties.
 
-    class ServerSocket: public Socket
+    class ServerSocket: public Socket   //Server-specific socket properties.
     {
         struct sockaddr_in serverAddr, clientAddr;	//serverAddr - address of server, clientAddr - address of connected client. 
         socklen_t clientLen;						//Size of the client address.

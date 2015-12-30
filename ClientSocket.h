@@ -4,9 +4,9 @@
 
 #include <netdb.h>  //Client specific library defining hostent.
 
-#include "OperableSocket.h" //Read and write operations.
+#include "OperableSocket.h" //Writable and readbale socket properties.
 
-    class ClientSocket: public OperableSocket
+    class ClientSocket: public OperableSocket   //Client-specific properties.
     {
         private:
             struct sockaddr_in serverAddr;  //Server address information.

@@ -1,15 +1,15 @@
-//Header file of SocketException class.
+//SocketException class definition.
 #ifndef SOCKETEXCEPTION_H
 #define SOCKETEXCEPTION_H
 
-#include <exception>
+#include <exception>    //Generic exception properties.
 
-    class SocketException : public std::exception   //Class to handle socket related exceptions.
+    class SocketException : public std::exception   //Socket specific exception type.
     {
         private:
             const char* message;    //Exception message.
         public:
-            SocketException(const char* message);       //Create Exception and store message.
+            SocketException(const char* message);       //Default constructor - store exception message.
             virtual const char* what() const throw();   //Get Exception message details - overides Exception class method.
     };
 

@@ -4,12 +4,12 @@
 
 #include <cstring>  //strcpy.
 
-#include <string>   //Normal string operations.
+#include <string>   //Friendly public interface.
 #include <utility>  //std::pair.
 
-#include "Socket.h" //Generic Socket functions.
+#include "Socket.h" //Generic Socket properties.
 
-    class OperableSocket: public Socket
+    class OperableSocket: public Socket //Writable and readable socket properties.
     {
         private:
             int bufferSize;                                             //Current size of the message buffer.

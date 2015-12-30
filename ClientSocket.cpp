@@ -1,4 +1,4 @@
-//Client Socket Implementation.
+//Client Socket class implementation.
 #include "ClientSocket.h"
 
 //Public Methods:
