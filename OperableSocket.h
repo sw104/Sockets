@@ -2,15 +2,10 @@
 #ifndef OPERABLESOCKET_H
 #define OPERABLESOCKET_H
 
-#define DEBUGMSG    //Show debug messages.
-
 #include <cstring>  //strcpy.
 
 #include <string>   //Normal string operations.
-#include <utility>  //std::pair
-#ifdef DEBUGMSG
-    #include <iostream> //Debugging only.
-#endif
+#include <utility>  //std::pair.
 
 #include "Socket.h" //Generic Socket functions.
 

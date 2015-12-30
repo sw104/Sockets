@@ -2,13 +2,7 @@
 #ifndef CLIENTSOCKET_H
 #define CLIENTSOCKET_H
 
-#define DEBUGMSG    //Display debug messages.
-
 #include <netdb.h>  //Client specific library defining hostent.
-
-#ifdef DEBUGMSG
-    #include <iostream> //Debugging only.
-#endif
 
 #include "OperableSocket.h" //Read and write operations.
 

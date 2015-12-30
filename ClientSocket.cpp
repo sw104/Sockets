@@ -29,4 +29,7 @@ void ClientSocket::connect(std::string host, int port, int keepAlive)   //Create
         throw SocketException("Client Socket Creation: Error setting socket options");
     if (::connect(getSocket(), (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0)    //Connect to server.
         throw SocketException("Client Socket Connection: Error connecting to server");
+    #ifdef DEBUGMSG
+        std::cout << "Client Socket: Connected to host" << std::endl;
+    #endif
 }

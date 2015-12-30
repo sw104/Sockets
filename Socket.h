@@ -2,10 +2,16 @@
 #ifndef SOCKET_H
 #define SOCKET_H
 
+#define DEBUGMSG    //Display debug messages.
+
 #include <unistd.h>
 #include <sys/types.h> 
 #include <sys/socket.h>
 #include <netinet/in.h>
+
+#ifdef DEBUGMSG
+    #include <iostream> //Debugging only.
+#endif
 
 #include "SocketException.h"    //Socket specific exceptions.
 

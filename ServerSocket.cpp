@@ -27,6 +27,9 @@ void ServerSocket::listen(int port, int keepAlive)
         throw SocketException("Server Socket Binding: Error binding socket to port");
     ::listen(getSocket(), 5);	//Listen on socket, max. 5 queued connections.
     clientLen = sizeof(clientAddr);
+    #ifdef DEBUGMSG
+        std::cout << "Server Socket: Listening for clients" << std::endl;
+    #endif
 }
 
 int ServerSocket::accept()
@@ -34,5 +37,8 @@ int ServerSocket::accept()
     int clientfd = ::accept(getSocket(), (struct sockaddr*)&clientAddr, &clientLen);	//Accept client connection.
     if (clientfd < 0)
         throw SocketException("Server Socket Accepting: Error accepting new client connection");
+    #ifdef DEBUGMSG
+        std::cout << "Server Socket: Accepted new client" << std::endl;
+    #endif
     return clientfd;
 }
