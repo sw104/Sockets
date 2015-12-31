@@ -1,24 +1,24 @@
-//Log class implementation.
+//Log File class implementation.
 
-#include "Log.h"
+#include "LogFile.h"
 
 //Public methods:
 
-Log::Log(std::string logName, bool isTimeStamped)
+LogFile::LogFile(std::string logName, bool isTimeStamped)
 {	
 	this->isTimeStamped = isTimeStamped;
-	logFile.open(logName, std::fstream::out | std::fstream::app);   //Append any existing file.
+	file.open(logName, std::fstream::out | std::fstream::app);   //Append any existing file.
 }
 
-Log::~Log()
+LogFile::~LogFile()
 {
-    logFile.close();
+    file.close();
 }
 
-void Log::write(std::string logData)
+void LogFile::write(std::string logData)
 {
     if (isTimeStamped)
-        logFile << time(NULL) << ": " << logData << std::endl;  //Write timestamped entry.	
+        file << time(NULL) << ": " << logData << std::endl;  //Write timestamped entry.	
     else
-        logFile << logData << std::endl;
+        file << logData << std::endl;
 }
