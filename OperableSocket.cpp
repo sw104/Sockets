@@ -41,6 +41,10 @@ void OperableSocket::readMessage(int length)
             throw SocketException("Message Reading: Client disconnected");
         totalBytesRead += bytesRead;
 	}
+    #ifdef LOGLVL2
+        std::string msg((char*)buffer, length);
+        log("Received message: " + msg);
+    #endif
 }
 
 void OperableSocket::writeMessage(const unsigned char* message, int length)
@@ -57,7 +61,10 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
             throw SocketException("Message Length Writing: Client disconnected");
         totalBytesWritten += bytesWritten;
     }
-
+    #ifdef LOGLVL2
+        std::string msg((char*)message, length);
+        log("Received message: " + msg);
+    #endif 
 }
 
 //Protected methods:
@@ -106,17 +113,11 @@ void OperableSocket::sendMessage(std::string message)
 {
     const unsigned char* cMsg = (unsigned char*)message.c_str();    //Convert string into raw bytes.
     sendMessage(cMsg, message.length());
-    #ifdef DEBUGMSG
-        std::cout << "Sent Message: " << message << std::endl;
-    #endif
 }
 
 std::string OperableSocket::fetchMessage()
 {
     std::pair<const unsigned char*, int> msgAndLen(getMessageAndLength());
     std::string str((char*)std::get<0>(msgAndLen), std::get<1>(msgAndLen)); //Convert raw bytes message into string.
-    #ifdef DEBUGMSG
-        std::cout << "Received message: " << str << std::endl;
-    #endif
     return str;
 }
