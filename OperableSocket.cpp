@@ -63,7 +63,7 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
     }
     #ifdef LOGLVL2
         std::string msg((char*)message, length);
-        log("Received message: " + msg);
+        log("Sent message: " + msg);
     #endif 
 }
 
