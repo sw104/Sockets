@@ -1,2 +1,2 @@
-#Append Main.cpp file to command arguments.
-g++ --std=c++11 Socket.cpp SocketException.cpp LogFile.cpp ServerSocket.cpp OperableSocket.cpp ClientSocket.cpp
+#Append C++ source file containing "main()" method to arguments.
+g++ --std=c++11 src/Socket.cpp src/SocketException.cpp src/LogFile.cpp src/ServerSocket.cpp src/OperableSocket.cpp src/ClientSocket.cpp
