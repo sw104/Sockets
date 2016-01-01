@@ -3,6 +3,7 @@
 #define LOGFILE_H
 
 #include <ctime>    //Timestamping.
+#include <iomanip>
 
 #include <fstream>  //File output operations.
 #include <string>   //Message handling.

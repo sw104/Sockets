@@ -18,7 +18,10 @@ LogFile::~LogFile()
 void LogFile::write(std::string logData)
 {
     if (isTimeStamped)
-        file << time(NULL) << ": " << logData << std::endl;  //Write timestamped entry.	
+    {
+        std::time_t t = std::time(NULL);      
+        file << std::put_time(std::gmtime(&t), "%c %Z") << ": " << logData << std::endl;  //Write timestamped entry.	
+    }
     else
         file << logData << std::endl;
 }

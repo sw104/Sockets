@@ -63,7 +63,7 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
     }
     #ifdef LOGLVL2
         std::string msg((char*)message, length);
-        log("Received message: " + msg);
+        log("Sent message: " + msg);
     #endif 
 }
 
@@ -71,6 +71,7 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
 
 OperableSocket::OperableSocket()
 {
+    buffer = new unsigned char[bufferSize = 16];
 }
 
 const unsigned char* OperableSocket::getMessage(int length)
