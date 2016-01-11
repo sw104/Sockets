@@ -1,4 +1,4 @@
-My C++ sockets library for use in other applications.
+My C++ sockets library for use on Linux systems.
 
 The main source code is located within the "src/" folder with the following class inheritance diagram:
 
@@ -6,7 +6,7 @@ Socket (includes SocketException and LogFile)
 |->ServerSocket
 |->OperableSocket->ClientSocket
 
-An example command to compile the source is included within the "compile.sh" script.
+An example command to compile the source with another source file containing a main() function is included within the "compile.sh" script.
 
-Basic example application source code for server and client applications are located within the "testapps/" folder.
+Basic example application source code for server and client applications is located within the "testapps/" folder.
 These can be compiled by running the "servercompile.sh" and "clientcompile.sh" scripts within the root directory - the output files from these scripts will be located within the "bin/" folder.
