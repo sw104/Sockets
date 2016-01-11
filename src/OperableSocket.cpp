@@ -61,10 +61,6 @@ void OperableSocket::writeMessage(const unsigned char* message, int length)
             throw SocketException("Message Length Writing: Client disconnected");
         totalBytesWritten += bytesWritten;
     }
-    #ifdef LOGLVL2
-        std::string msg((char*)message, length);
-        log("Sent message: " + msg);
-    #endif 
 }
 
 //Protected methods:
@@ -95,8 +91,11 @@ void OperableSocket::sendMessage(const unsigned char* message, int length)
 {
     writeMessage((unsigned char*)&length, 4);   //Write message length to first 4 bytes.
     writeMessage(message, length);
+    #ifdef LOGLVL2
+        std::string msg((char*)message, length);
+        log("Sent message: " + msg);
+    #endif 
 }
-
 
 //Public methods:
 
