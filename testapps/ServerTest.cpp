@@ -1,3 +1,11 @@
+/*
+ * To the extent possible under law, the person who associated CC0 with
+ * this work has waived all copyright and related or neighboring rights
+ * to this work.
+ *
+ * Any copyright is dedicated to the Public Domain.
+ * http://creativecommons.org/publicdomain/zero/1.0/
+ */
 //Server socket test application.
 
 #include "ServerSocket.h"   //Server socket operations.
