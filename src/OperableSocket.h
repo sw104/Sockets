@@ -1,8 +1,15 @@
+/*
+ * Copyright 2016 Sam White
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 //Operable Socket class definition.
 #ifndef OPERABLESOCKET_H
 #define OPERABLESOCKET_H
 
-#include <cstring>  //strcpy.
+#include <cstring>  //bzero.
 
 #include <string>   //Friendly public interface.
 #include <utility>  //std::pair.

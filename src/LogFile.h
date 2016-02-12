@@ -1,9 +1,16 @@
+/*
+ * Copyright 2016 Sam White
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 //Log File class definition.
 #ifndef LOGFILE_H
 #define LOGFILE_H
 
 #include <ctime>    //Timestamping.
-#include <iomanip>
+#include <iomanip>  //Timestamping - put_time().
 
 #include <fstream>  //File output operations.
 #include <string>   //Message handling.

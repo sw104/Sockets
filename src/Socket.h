@@ -1,3 +1,10 @@
+/*
+ * Copyright 2016 Sam White
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 //Base Socket class definition.
 #ifndef SOCKET_H
 #define SOCKET_H
@@ -17,13 +24,13 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#ifdef LOGGING
-    #include <iostream> //Logging only.
+#ifdef LOGMSG
+    #include <iostream> //Message logging only.
 #endif
 
 #include "SocketException.h"    //Socket specific exceptions.
 #ifdef LOGFILE
-    #include "LogFile.h"//File logging operations.
+    #include "LogFile.h"    //File logging operations.
 #endif
 
     class Socket    //Generic socket properties.
