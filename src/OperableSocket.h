@@ -9,7 +9,7 @@
 #ifndef OPERABLESOCKET_H
 #define OPERABLESOCKET_H
 
-#include <cstring>  //strcpy.
+#include <cstring>  //bzero.
 
 #include <string>   //Friendly public interface.
 #include <utility>  //std::pair.

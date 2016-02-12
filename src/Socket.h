@@ -24,13 +24,13 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#ifdef LOGGING
-    #include <iostream> //Logging only.
+#ifdef LOGMSG
+    #include <iostream> //Message logging only.
 #endif
 
 #include "SocketException.h"    //Socket specific exceptions.
 #ifdef LOGFILE
-    #include "LogFile.h"//File logging operations.
+    #include "LogFile.h"    //File logging operations.
 #endif
 
     class Socket    //Generic socket properties.
